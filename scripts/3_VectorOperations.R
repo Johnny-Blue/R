@@ -2,7 +2,8 @@
 
 flowers.count <- c(10, 20, 30,  40) #using combine function
 flowers.count #print variable content
-str(flowers.count)
+str(flowers.count) #get structure
+
 #Vectorized operations :Input - Single vector, Output - Scalar
 mean(flowers.count)
 #Vectorized operations :Input - Single vector, output - Single vector
@@ -18,3 +19,17 @@ flowers.total.count
 flowers.snowdrops.count <- c(1,2)
 flowers.total.count <- flowers.total.count + flowers.snowdrops.count #Addition
 flowers.total.count
+
+#checks
+is.integer(flowers.count)
+is.integer(as.integer(flowers.count)) #check of explicit cast
+is.numeric(flowers.count)
+
+#selection
+flowers.count[1]
+flowers.count[1:3]
+flowers.count[flowers.count>10] #select based on condition
+flowers.count[c(T,F,F,T)] #select based on true/false
+
+flowers.price <- c( "60.5", 72.5 , 45.2,  47.5) #implicit cast
+str(flowers.price)

@@ -1,6 +1,6 @@
 library("RSQLServer", lib.loc="~/R/win-library/3.2")
 startTime1 <- Sys.time()
-sqlconn <- dbConnect(SQLServer(), 'sqldev01_debug:1433/ttool_ecb_latest;user=sql_user;password=*****')
+sqlconn <- dbConnect(SQLServer(), 'sqldev01_debug:1433/ttool_ecb_latest;user=sql_user;password=*******;')
 
 # dbGetInfo(sqlconn)
 result <- dbSendQuery(conn = sqlconn, statement = 'SELECT [AR21_EmploymentStatus_LST],[AR26_PrimaryIncome_MNY],[AR67_CurrentBalance_MNY] FROM [ttool].[RMBS_ASSETS]')
@@ -32,7 +32,7 @@ plot(x,y)
 
 #install.packages("ggplot2")
 library(ggplot2)
-ggplot(data=data.frame(x), aes(x=x, y=y)) + stat_identity() + geom_bar() 
+ggplot(data=data.frame(x), aes(x=x, y=y)) + stat_identity()
 
 
 #https://docs.microsoft.com/en-us/sql/advanced-analytics/r-services/sql-server-r-services-tutorials
